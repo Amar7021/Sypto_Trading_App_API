@@ -9,9 +9,11 @@ import {
 
 const router = express.Router()
 
-router.route("/login").get(loginUser)
-router.route("/profile").get(getProfile)
+router.route("/user/login").get(loginUser)
+router.route("/user/profile").get(getProfile)
 
-router.route("/place-buy-order").post(buyOrder)
-router.route("/sell-order").post(sellOrder)
-router.route("/current-holdings").get(getCurrentHoldings)
+router.route("/user/place-buy-order").post(buyOrder)
+router.route("/user/sell-order").post(sellOrder)
+router.route("/user/current-holdings").get(getCurrentHoldings)
+
+export default router
